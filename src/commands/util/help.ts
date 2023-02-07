@@ -11,7 +11,7 @@ const helpCommand = command(meta, ({ interaction }) => {
   const embed = new EmbedBuilder()
     .setColor("Navy")
     .setAuthor({
-      name: "<your bot> Help Menu",
+      name: "ServerManager Help Menu",
       iconURL: interaction.client.user.displayAvatarURL(),
     });
 
@@ -49,8 +49,8 @@ const helpEvent = event(
     if (!(interaction.customId === "help_select_menu")) return;
 
   const embed = new EmbedBuilder()
-    .setColor("Navy")
-    .setAuthor({ name: "<your bot> Help Menu", iconURL: interaction.client.user.displayAvatarURL() })
+    .setColor("Green")
+    .setAuthor({ name: "ServerManager Help Menu", iconURL: interaction.client.user.displayAvatarURL() })
 
   categories.forEach((category) => {
     if (interaction.values[0] === `${category.name}_option`) {
